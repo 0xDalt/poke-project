@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, Component } from "react";
 import { Box, Grid, GridItem, Show } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
 import GameGrid from "./components/GameGrid";
 import LandingPage from "./components/LandingPage";
-import Balance from "./components/LandingPage";
+import Balance from "./components/Balance";
+import SellerFlow from "./components/sellerFlow";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("landing"); // Default to 'landing' page
@@ -17,6 +19,8 @@ function App() {
         return <GameGrid />;
       case "balance":
         return <Balance />;
+      case "SellerFlow":
+        return <SellerFlow />;
       default:
         return <LandingPage />;
     }
@@ -24,7 +28,7 @@ function App() {
 
   return (
     <Box
-      backgroundImage="url('/src/imgTest/test.jpg')" // Replace with the actual path to your image
+      // backgroundImage="url('/src/imgTest/test.jpg')" // Replace with the actual path to your image
       backgroundSize="cover"
       backgroundRepeat="no-repeat"
       backgroundPosition="center"
