@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import jsonData from "/Users/goncaloazevedo/Desktop/gaame-store-2f64de4e2b4917985dc8387519bd1bb7cb2f638f/public/poke.json"; // Import the JSON file
+import jsonData from "../../public/poke.json"; // Import the JSON file
 
 // Define the interface for a Pokemon card
 export interface Game {
